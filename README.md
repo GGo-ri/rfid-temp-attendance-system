@@ -51,6 +51,14 @@ flowchart TD
 4. 강의실 번호, 카드 ID, 체온을 ESP8266(AT 명령)으로 `send_data.php` 에 HTTP GET 으로 보냅니다.
 5. 서버가 `enter_list` 테이블에 저장하고, `data_loader.php` 가 기록을 표로 보여줍니다.
 
+### 하드웨어
+
+| 회로 연결 | 완성된 장치 |
+|---|---|
+| <img src="docs/images/wiring_photo.jpg" alt="회로 연결" width="400"> | <img src="docs/images/enclosure.jpg" alt="완성된 장치" width="400"> |
+
+RFID 리더(MFRC522)와 체온 센서(MLX90614)를 아두이노에 연결한 뒤, 상자 윗면에 리더기와 센서만 나오도록 넣어 마감했습니다.
+
 ## 폴더 구조
 
 ```
