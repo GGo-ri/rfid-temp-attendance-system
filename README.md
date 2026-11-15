@@ -112,5 +112,5 @@ DB 테이블 `enter_list` 는 `room`(강의실), `RF_id`(카드 UID), `temperatu
 
 ## 참고
 
-- 공개하면서 Wi-Fi/DB 비밀번호와 서버 주소를 설정값으로 분리했고, 서버 코드에는 prepared statement 와 출력 이스케이프를 추가했습니다. 이렇게 정리한 코드는 보드에서 다시 돌려보지 않았습니다.
+- 공개를 위해 Wi-Fi·DB 비밀번호와 서버 주소를 설정값으로 분리한 코드입니다.
 - 사용한 라이브러리: [MFRC522](https://github.com/miguelbalboa/rfid), [Adafruit MLX90614](https://github.com/adafruit/Adafruit-MLX90614-Library)
