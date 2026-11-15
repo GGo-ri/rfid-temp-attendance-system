@@ -17,7 +17,7 @@
 
 ## 프로젝트 정보
 
-| | |
+| 항목 | 내용 |
 |---|---|
 | 기간 / 인원 | 2021년 / 2명 (강민수, 최규석) |
 | 역할 | 2인 공동 개발. 인원이 적어 분야를 나누지 않고 설계, 펌웨어, 서버·DB, 웹 조회 페이지를 함께 만들었습니다. |
@@ -31,15 +31,15 @@
 ## 시스템 구조
 
 ```mermaid
-flowchart LR
-    card["학생증<br/>(RFID 카드)"] --> rfid["MFRC522<br/>RFID 리더"]
-    body["손목 체온"] --> ir["MLX90614<br/>비접촉 적외선 센서"]
+flowchart TD
+    card["학생증 (RFID 카드)"] --> rfid["MFRC522 RFID 리더"]
+    body["손목 체온"] --> ir["MLX90614 비접촉 적외선 센서"]
     rfid --> uno["Arduino"]
     ir --> uno
-    uno -->|"UART (AT 명령)"| esp["ESP8266<br/>Wi-Fi 모듈"]
+    uno -->|"UART (AT 명령)"| esp["ESP8266 Wi-Fi 모듈"]
     esp -->|"HTTP GET"| api["send_data.php"]
-    api --> db[("MySQL<br/>enter_list")]
-    db --> page["data_loader.php<br/>기록 조회 페이지"]
+    api --> db[("MySQL enter_list")]
+    db --> page["data_loader.php 기록 조회 페이지"]
 ```
 
 동작 순서는 다음과 같습니다.
